@@ -1,5 +1,6 @@
 filetype off
-call pathogen#runtime_append_all_bundles()
+silent! call pathogen#runtime_append_all_bundles()
+"call pathogen#infect('~/.vim/bundle')
 call pathogen#helptags()
 
 syntax on                           " syntax highlighing
@@ -40,6 +41,8 @@ map <leader>tr :CommandTFlush<CR>
 
 nmap <leader>a <Esc>:Ack!
 
+"nmap <leader>q <Esc>:TlistOpen<CR>
+
 map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
 
 vnoremap < <gv
@@ -55,9 +58,9 @@ set autoindent          " copy indent from current line when starting a new line
 set number
 set guifont=Menlo:h14
 set guioptions-=L
-set guioptions-=r 
+set guioptions-=r
+set mouse=a
 
-#ignored
 set wildignore+=*.pyc
 set wildignore+=*.jpg
 set wildignore+=*.jpeg
